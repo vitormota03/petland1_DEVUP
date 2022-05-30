@@ -18,3 +18,9 @@ https://user-images.githubusercontent.com/103219334/171055286-19c9c3a3-f310-4728
 
 https://user-images.githubusercontent.com/103219334/171055276-7e0dc103-b74f-4054-9694-10f461b0fd09.mp4
 
+# DIAGRAMA ENTIDADE RELACIONAMENTO:
+![petand_mer](https://user-images.githubusercontent.com/103219334/171064740-b52b4058-0d11-422b-bc8e-df2d8983d01c.png)
+
+
+
+
