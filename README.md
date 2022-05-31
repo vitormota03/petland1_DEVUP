@@ -21,6 +21,9 @@ https://user-images.githubusercontent.com/103219334/171055276-7e0dc103-b74f-4054
 # DIAGRAMA ENTIDADE RELACIONAMENTO:
 ![petand_mer](https://user-images.githubusercontent.com/103219334/171064740-b52b4058-0d11-422b-bc8e-df2d8983d01c.png)
 
+# DIAGRAMA DE CLASSES (gerado pelo puglin UML do Netbeans):
+![petland_der](https://user-images.githubusercontent.com/103219334/171079431-b4b893d7-d952-4140-8566-26ba5b286254.JPG)
+
 
 
 
