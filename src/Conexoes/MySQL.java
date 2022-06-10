@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package conexoes;
 
 import java.sql.Connection;
@@ -12,34 +7,30 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Macrr
- */
 public class MySQL {
-    
+
     //atributos de conexão com o banco
-    public  Connection conn = null; //variável de conexão com o banco
+    public Connection conn = null; //variável de conexão com o banco
     private Statement statement; //variável de manipulação do SQL
     private ResultSet resultSet;
-    
+
     private String servidor = "localhost:3307";
     private String nomeDoBanco = "petland1";
     private String usuario = "root";
     private String senha = "0302";
-    
+
     //Construtor    
-    public MySQL(){
-    
+    public MySQL() {
+
     }
-    
-    public  MySQL(String servidor, String nomeDoBanco, String usuario, String senha){
+
+    public MySQL(String servidor, String nomeDoBanco, String usuario, String senha) {
         this.servidor = servidor;
         this.nomeDoBanco = nomeDoBanco;
         this.usuario = usuario;
         this.senha = senha;
     }
-    
+
     public Connection getConn() {
         return conn;
     }
@@ -63,24 +54,24 @@ public class MySQL {
     public void setResultSet(ResultSet resultSet) {
         this.resultSet = resultSet;
     }
-        
-    public void conectaBanco(){
+
+    public void conectaBanco() {
         try {
             //Class.forName("com.mysql.jdbc.Driver").newInstance();
 
             conn = DriverManager.getConnection("jdbc:mysql://" + servidor + "/" + nomeDoBanco, usuario, senha);
             //conn = DriverManager.getConnection("jdbc:mysql://localhost3306/banco_loja", "root", "root");
-            
-            if(conn != null){
+
+            if (conn != null) {
                 System.out.println("Conexão efetuada com sucesso! " + "ID: " + conn);
-            }            
-            
+            }
+
         } catch (Exception e) {
             System.out.println("Conexão não realizada - ERRO: " + e.getMessage());
         }
     }
-    
-    public boolean fechaBanco(){
+
+    public boolean fechaBanco() {
         try {
             conn.close();
             return true;
@@ -89,23 +80,23 @@ public class MySQL {
             return false;
         }
     }
-    
-    public int insertSQL(String SQL){
+
+    public int insertSQL(String SQL) {
         int status = 0;
         try {
             //createStatement de con para criar o Statement
-            this.setStatement(getConn().createStatement());            
+            this.setStatement(getConn().createStatement());
 
             // Definido o Statement, executamos a query no banco de dados
-            this.getStatement().executeUpdate(SQL);            
-        
+            this.getStatement().executeUpdate(SQL);
+
             return status;
         } catch (SQLException ex) {
             ex.printStackTrace();
             return status;
         }
     }
-    
+
     public void executarSQL(String sql) {
         try {
             this.statement = conn.createStatement(
@@ -119,15 +110,15 @@ public class MySQL {
             sqlex.printStackTrace();
         }
     }
-    
-    public boolean updateSQL(String pSQL){
-        try {            
+
+    public boolean updateSQL(String pSQL) {
+        try {
             //createStatement de con para criar o Statement
             this.setStatement(getConn().createStatement());
 
             // Definido o Statement, executamos a query no banco de dados
             getStatement().executeUpdate(pSQL);
-            
+
         } catch (SQLException ex) {
             ex.printStackTrace();
             return false;

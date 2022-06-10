@@ -1,4 +1,4 @@
-package Conexoes;
+package conexoes;
 
 import java.sql.*;
 
@@ -19,7 +19,6 @@ public class ModuloConexao {
         } catch (Exception e) {
             return null;
         }
-
     }
 
 }
