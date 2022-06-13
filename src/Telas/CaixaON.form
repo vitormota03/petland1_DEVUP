@@ -885,7 +885,7 @@
                         <Component class="javax.swing.JButton" name="jButton15">
                           <Properties>
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                              <Image iconType="3" name="/imagens/racao-para-animais (1)_1_1_1_1.png"/>
+                              <Image iconType="3" name="/imagens/xampu.png"/>
                             </Property>
                             <Property name="text" type="java.lang.String" value="R$ 20,00"/>
                             <Property name="horizontalTextPosition" type="int" value="2"/>
@@ -989,7 +989,7 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="758" max="32767" attributes="0"/>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">

@@ -10,6 +10,7 @@ import java.awt.event.ActionListener;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import javax.swing.JOptionPane;
 import javax.swing.Timer;
 import objetos.ValorFinal;
 
@@ -19,12 +20,13 @@ import objetos.ValorFinal;
  */
 public class CaixaON extends javax.swing.JFrame {
 
+    ValorFinal valorFinal = new ValorFinal();
+
     double countC = 0;
     double countG = 0;
     double countCA = 0;
     double countP = 0;
-
-    ValorFinal valorFinal = new ValorFinal();
+    double resultado = 0;
 
     public CaixaON() {
         initComponents();
@@ -535,7 +537,7 @@ public class CaixaON extends javax.swing.JFrame {
         jPanel10.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Gato", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 1, 12), new java.awt.Color(0, 0, 0))); // NOI18N
         jPanel10.setPreferredSize(new java.awt.Dimension(172, 165));
 
-        jButton15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/racao-para-animais (1)_1_1_1_1.png"))); // NOI18N
+        jButton15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/xampu.png"))); // NOI18N
         jButton15.setText("R$ 20,00");
         jButton15.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jButton15.addActionListener(new java.awt.event.ActionListener() {
@@ -638,7 +640,7 @@ public class CaixaON extends javax.swing.JFrame {
         jPanel23.setLayout(jPanel23Layout);
         jPanel23Layout.setHorizontalGroup(
             jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 758, Short.MAX_VALUE)
         );
         jPanel23Layout.setVerticalGroup(
             jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -786,10 +788,55 @@ public class CaixaON extends javax.swing.JFrame {
 
         }
     }//GEN-LAST:event_jButton14ActionPerformed
+    public static double mostraValor(double countC, double countG, double countCA, double countP) {
+
+        return (countC * 20) + (countG * 20) + (countCA * 15) + (countP * 12);
+
+    }
+
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        Pagamento pagamento = new Pagamento();
-        pagamento.setVisible(true);
+        resultado = mostraValor(countC, countG, countCA, countP);
+        JOptionPane.showMessageDialog(null, "O valor final da compra é R$" + resultado);
+
+        double valor;
+
+        valor = Double.parseDouble(JOptionPane.showInputDialog("valor recebido"));
+
+        if (valor == resultado) {
+            JOptionPane.showMessageDialog(this, "Pagamento realizado!",
+                    "Efetuado", JOptionPane.INFORMATION_MESSAGE);
+
+            dispose();
+            CompraFinalizada cf = new CompraFinalizada();
+            cf.setVisible(true);
+        }
+
+        if (valor < resultado) {
+
+            JOptionPane.showMessageDialog(null, "Impossivel efetuar o pagamento");
+
+            JOptionPane.showMessageDialog(this, "Compra não efetuada!",
+                    "Erro", JOptionPane.ERROR_MESSAGE);
+
+            dispose();
+            Menu menu = new Menu();
+            menu.setVisible(true);
+
+        }
+
+        if (valor > resultado) {
+            JOptionPane.showMessageDialog(this, "Pagamento realizado!",
+                    "Efetuado", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Seu troco é de R$" + (valor - resultado));
+
+            dispose();
+            CompraFinalizada cf = new CompraFinalizada();
+            cf.setVisible(true);
+
+        }
+
+
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
@@ -936,8 +983,6 @@ public class CaixaON extends javax.swing.JFrame {
             Lhora.setText(String.format("%1$tH:%1$tM:%1$tS", now));
 
         }
-
-        double valorFinal = ((countC * 20) + (countG * 20) + (countCA * 15) + (countP * 12));
 
     }
 
