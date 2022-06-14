@@ -1,6 +1,6 @@
 # PetLand by DevUps 
 
-Segue, a ultima versão da aplicação desktop em JAVA, PetLand, da qual se trata de um sistema de um petshop comum. Neste contém CRUD de cadastro de clientes e produtos, integrados ao banco de dados MySQL, assim, catálogo e venda de produtos relacionados. Isso, somado com boas práticas de POO no desenvolvimento de classes (objetos), envolvendo pilares como abstração, herança e encapsulamento. 
+Segue, a ultima versão da aplicação desktop em JAVA, PetLand, da qual se trata de um sistema de um petshop comum. Neste contém CRUD de cadastro de clientes e produtos, integrados ao banco de dados MySQL, assim como, catálogo e venda de produtos relacionados. Isso, somado com boas práticas de POO no desenvolvimento de classes (objetos), envolvendo pilares como abstração, herança e encapsulamento. 
 
 ## IDE utilizada: NetBeans 8.2 | Jframe
 ## Database utilizado: MySQL - Workbench 5.7.19
