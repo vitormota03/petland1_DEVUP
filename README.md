@@ -17,12 +17,13 @@ Vitor Mota      (211538);
 ## VÍDEO DA APLICAÇÃO RODANDO:
 https://youtu.be/a_EddYhMA3c
 
+## VÍDEO DA APRESENTAÇÃO DO PROJETO:
+https://youtu.be/pmdN3sRK0X8
+
 
 
 ## MODELO ENTIDADE RELACIONAMENTO:
 ![mer_petland](https://user-images.githubusercontent.com/103219334/173469667-4ca95e57-75ed-4725-8fad-4ba2e46e0867.png)
-
-
 
 
 ## DIAGRAMA DE CLASSES (gerado pelo plugin UML do Netbeans):
