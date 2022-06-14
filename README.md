@@ -14,8 +14,9 @@ Pedro Cerri     (211595);
 Vitor Mota      (211538);
 
 
-## APLICAÇÃO RODANDO:
-![gif_petland](https://user-images.githubusercontent.com/103219334/173447323-8c166f75-09e7-4657-a806-0df9f63558e6.gif)
+## VÍDEO DA APLICAÇÃO RODANDO:
+https://youtu.be/a_EddYhMA3c
+
 
 
 ## MODELO ENTIDADE RELACIONAMENTO:
