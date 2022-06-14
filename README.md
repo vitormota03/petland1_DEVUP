@@ -19,11 +19,14 @@ Vitor Mota      (211538);
 
 
 ## MODELO ENTIDADE RELACIONAMENTO:
-![mer_petland](https://user-images.githubusercontent.com/103219334/173441266-e191323d-2da7-4f14-82aa-7ba7183b0b10.png)
+![mer_petland](https://user-images.githubusercontent.com/103219334/173469667-4ca95e57-75ed-4725-8fad-4ba2e46e0867.png)
+
+
 
 
 ## DIAGRAMA DE CLASSES (gerado pelo plugin UML do Netbeans):
-[der_petland.pdf](https://github.com/vitormota03/petland1_DEVUP/files/8894308/der_petland.pdf)
+[der_petland.pdf](https://github.com/vitormota03/petland1_DEVUP/files/8894594/der_petland.pdf)
+
 
 
 
